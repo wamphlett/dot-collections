@@ -14,3 +14,6 @@ This will create a directory in your home directory called `.dot-collections`.
 Collections can be added by creating a directory in the `.dot-collections` directory. The name of the directory is considered the name of the collection. Each collection must include a `.collection` file, this is the file that will be including when loading collections.
 
 _it is worth noting that all collections will be loaded in alphabetical order_
+
+## Eample Collection
+https://github.com/wamphlett/dot-collection

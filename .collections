@@ -1,0 +1,15 @@
+COLLECTIONS_PATH=$HOME/.dot-collections
+
+# Make sure a collections directory exists
+[[ ! -d $COLLECTIONS_PATH ]] && mkdir $COLLECTIONS_PATH
+
+# Go through all the collections and load the dot files within
+for collection in $COLLECTIONS_PATH/*; do
+  if [ -d $collection ]; then
+    for dotfile in $collection/.*; do 
+      [[ -f $dotfile ]] || continue
+      source $dotfile
+    done
+    echo "$(basename $collection) loaded"
+  fi
+done

@@ -6,10 +6,10 @@ COLLECTIONS_PATH=$HOME/.dot-collections
 # Go through all the collections and load the dot files within
 for collection in $COLLECTIONS_PATH/*; do
   if [ -d $collection ]; then
-    for dotfile in $collection/.*; do 
-      [[ -f $dotfile ]] || continue
-      source $dotfile
-    done
-    echo "$(basename $collection) loaded"
+    if [[ -f $collection/.collection ]]; then
+      source $collection/.collection
+    else
+      echo "missing collection file for $(basename $collection)"
+    fi
   fi
 done

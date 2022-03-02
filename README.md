@@ -5,7 +5,7 @@ This is not intended to be a replacement for dot file managers, there are many o
 
 ## Install
 ```
-go install github.com/wamphlett/dot-collections@latest
+go install github.com/wamphlett/dot-collections/dotc@latest
 ```
 Run `dotc install` to install dot collections. (running any other command before this will also trigger the install). This will create a directory in your home directory called `.dot-collections` which is where all collections will be added.
 
@@ -32,7 +32,7 @@ Dot collections provides the ability to configure all the required environment v
 ```
 dotc bootstrap [collection]
 ```
-Each collection can define a bootstrap file in the collection details. This allows collections to define code which should be run only once - good for writing install scripts. `bootstrap` will invoke the specified shell script.
+Each collection can define a bootstrap file in the [collection details](#collection-details). This allows collections to define code which should be run only once - good for writing install scripts. `bootstrap` will invoke the specified shell script.
 
 ### List collections
 ```
@@ -65,7 +65,7 @@ The collection file must be named `collection.sh` and in the root of the project
 A yaml file named `collection.yaml` must be present in the root of the project to provide information about the collection. This file is used to define the variables which can be configured by the user.
 
 #### Variable parser
-After configuration, this tool saves variables in a file called `.vars` in the root of the project. In order for these to be included in your collection, the `vars.sh` file should be included in your collection file.
+After configuration, this tool saves variables in a file called `.vars` in the root of the project. In order for these to be included in your collection, the `vars.sh` file should be included in your [collection file](#collection-file).
 
 ### Example Collection
 https://github.com/wamphlett/dot-collection

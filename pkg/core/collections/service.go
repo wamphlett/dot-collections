@@ -3,7 +3,7 @@ package collections
 import (
 	"errors"
 	"fmt"
-	"io/fs"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 )
@@ -50,6 +50,7 @@ func (s *Service) GetAll() ([]*Collection, error) {
 		collection, err := s.Get(slug)
 		if err != nil {
 			// TODO print a warning to the terminal
+			fmt.Printf("warn: failed to get collection %s: %s", slug, err.Error())
 			continue
 		}
 		collections[i] = collection
@@ -64,18 +65,16 @@ func (s *Service) UpdateVariables(collection *Collection) error {
 
 func (s *Service) getCollectionSlugs() ([]string, error) {
 	var slugs []string
-	err := filepath.Walk(s.installPath, func(p string, info fs.FileInfo, err error) error {
-		if info.IsDir() && s.installPath != p {
-			if err != nil {
-				return err
-			}
-			slugs = append(slugs, info.Name())
-		}
-		return nil
-	})
 
+	files, err := ioutil.ReadDir(s.installPath)
 	if err != nil {
 		return nil, err
+	}
+
+	for _, file := range files {
+		if file.IsDir() {
+			slugs = append(slugs, file.Name())
+		}
 	}
 
 	return slugs, nil
@@ -84,8 +83,4 @@ func (s *Service) getCollectionSlugs() ([]string, error) {
 func (s *Service) collectionExists(slug string) bool {
 	_, err := os.Stat(filepath.Join(s.installPath, slug))
 	return !os.IsNotExist(err)
-}
-
-func IsValidSlug(slug string) bool {
-	return true
 }

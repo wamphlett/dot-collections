@@ -7,8 +7,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// listCollectionsCmd represents the listCollections command
-var listCollectionsCmd = &cobra.Command{
+// listCmd represents the listCollections command
+var listCmd = &cobra.Command{
 	Use:   "list",
 	Short: "List the installed collections",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -31,5 +31,5 @@ var listCollectionsCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(listCollectionsCmd)
+	rootCmd.AddCommand(listCmd)
 }

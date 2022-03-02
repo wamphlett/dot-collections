@@ -22,7 +22,7 @@ dotc add
 ```
 The `add` method will ask you for a URL and an identifier. The URL should be a git repository of a valid collection and the identifier can be any string.
 
-### Create a new collection
+### Create a new collection (unimplemented)
 ```
 dotc new
 ```
@@ -77,5 +77,6 @@ After configuration, this tool saves variables in a file called `.vars` in the r
 https://github.com/wamphlett/dot-collection
 
 ## TODO
+- [ ] Create tool to initialise new collections
 - [ ] Better error handling
 - [ ] Better logging

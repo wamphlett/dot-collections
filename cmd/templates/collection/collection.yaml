@@ -1,0 +1,13 @@
+# General collection information
+# add a small description about your project
+description: ""
+
+# defines the bootstrap file to use when running the bootstrap command
+bootstrapper: "bootstrap.sh"
+
+# configurable variables for your collection
+vars:
+  # - key: PROJECT_VAR # Required. The variable to set
+  #   default: 1234    # Optional. Default value which a user can set during configuration.
+  #   env: true        # Optional. Should expose the variable to the env or not. Accepts true/false, defaults to false when omitted.
+

@@ -1,0 +1,1 @@
+# Bootstrap file which is executed when "dotc bootstrap <collection-name>"

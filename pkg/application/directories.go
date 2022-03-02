@@ -7,7 +7,7 @@ import (
 )
 
 func InstallLocation() string {
-	return path.Join(HomeDir(), ".dot-collections-3")
+	return path.Join(HomeDir(), ".dot-collections")
 }
 
 func HomeDir() string {

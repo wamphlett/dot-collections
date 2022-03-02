@@ -9,6 +9,12 @@ go install github.com/wamphlett/dot-collections/dotc@latest
 ```
 Run `dotc install` to install dot collections. (running any other command before this will also trigger the install). This will create a directory in your home directory called `.dot-collections` which is where all collections will be added.
 
+After installing, you will need to include the collection file in your bashrc file
+
+```
+source .dot-collections/collections.sh
+```
+
 ## Usage
 ### Add an existing collection
 ```

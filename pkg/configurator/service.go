@@ -7,7 +7,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/wamphlett/dotc/pkg/core/collections"
+	"github.com/wamphlett/dot-collections/pkg/core/collections"
 )
 
 const (

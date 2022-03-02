@@ -1,4 +1,4 @@
-module github.com/wamphlett/dotc
+module github.com/wamphlett/dot-collections
 
 go 1.17
 

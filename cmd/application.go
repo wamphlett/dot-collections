@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/wamphlett/dotc/pkg/application"
-	"github.com/wamphlett/dotc/pkg/configurator"
-	"github.com/wamphlett/dotc/pkg/core/collections"
+	"github.com/wamphlett/dot-collections/pkg/application"
+	"github.com/wamphlett/dot-collections/pkg/configurator"
+	"github.com/wamphlett/dot-collections/pkg/core/collections"
 )
 
 func getApp() *collections.Service {

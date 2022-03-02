@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/spf13/cobra"
-	"github.com/wamphlett/dotc/pkg/application"
+	"github.com/wamphlett/dot-collections/pkg/application"
 	"os"
 )
 

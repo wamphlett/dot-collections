@@ -7,7 +7,7 @@ package cmd
 import (
 	"bufio"
 	"fmt"
-	"github.com/wamphlett/dotc/pkg/core/collections"
+	"github.com/wamphlett/dot-collections/pkg/core/collections"
 	"os"
 
 	"github.com/spf13/cobra"
